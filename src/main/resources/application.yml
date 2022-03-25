@@ -1,0 +1,30 @@
+spring:
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:oracle:thin:@211.106.171.36:11527:POS
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: inspien01
+    password: inspien01
+
+logging:
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+
+server:
+  port: 8081
+  servlet:
+    encoding:
+      enabled: true
+      force-response: true
+      charset: UTF-8
+  error:
+    include-message: always
+
+ftp.connect.info.user: inspien01
+ftp.connect.info.password: inspien01
+ftp.connect.info.host: 211.106.171.36
+ftp.connect.info.port: 20421
